@@ -79,9 +79,9 @@ class Professor(models.Model):
 
 class Turma(models.Model):
 
-    nome = models.CharField(max_length=25, blank=False, null=False, default="3° Ano A - Manhã")
-    professor = models.ManyToManyField("Professor", related_name="professores")
-    alunos = models.ManyToManyField("Aluno", related_name="alunos")
+    nome = models.CharField(max_length=25, blank=False, null=False, default="3° Ano A - Manhã", unique=True)
+    professor = models.ManyToManyField("Professor", related_name="turmas",name='professores')
+    alunos = models.ManyToManyField("Aluno", related_name="turma")
 
     @property
     def qtd_alunos(self):
@@ -89,11 +89,11 @@ class Turma(models.Model):
     
     @property
     def qtd_professores(self):
-        return len(self.professor.all())
+        return len(self.professores.all())
 
     @property
     def list_materias(self):
-        professores = self.professor.all()
+        professores = self.professores.all()
         materias = [professor.materia for professor in professores if professor.materia]
         return materias
     
@@ -104,7 +104,7 @@ class Turma(models.Model):
     
     @property
     def lista_professores(self):
-        professores = [professor.nome for professor in self.professor.all()]
+        professores = [professor.nome for professor in self.professores.all()]
         return professores
 
     def __str__(self):
