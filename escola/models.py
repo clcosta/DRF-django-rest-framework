@@ -76,3 +76,39 @@ class Professor(models.Model):
     
     class Meta:
         verbose_name_plural = "Professores"
+
+class Turma(models.Model):
+
+    nome = models.CharField(max_length=25, blank=False, null=False, default="3° Ano A - Manhã")
+    professor = models.ManyToManyField("Professor", related_name="professores")
+    alunos = models.ManyToManyField("Aluno", related_name="alunos")
+
+    @property
+    def qtd_alunos(self):
+        return len(self.alunos.all())
+    
+    @property
+    def qtd_professores(self):
+        return len(self.professor.all())
+
+    @property
+    def list_materias(self):
+        professores = self.professor.all()
+        materias = [professor.materia for professor in professores if professor.materia]
+        return materias
+    
+    @property
+    def lista_alunos(self):
+        alunos = [aluno.nome for aluno in self.alunos.all()]
+        return alunos
+    
+    @property
+    def lista_professores(self):
+        professores = [professor.nome for professor in self.professor.all()]
+        return professores
+
+    def __str__(self):
+        return self.nome + f" ({self.qtd_alunos} Alunos - {self.qtd_professores} Professores)"
+
+    class Meta:
+        verbose_name_plural = "Turmas"

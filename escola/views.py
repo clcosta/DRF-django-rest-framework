@@ -1,7 +1,7 @@
 from rest_framework import viewsets
 
-from .models import Aluno, Professor
-from .serializer import AlunoSerializer, ProfessorSerializer
+from .models import Aluno, Professor, Turma
+from .serializer import AlunoSerializer, ProfessorSerializer, TurmaSerializer
 
 class AlunoViewSet(viewsets.ModelViewSet):
     queryset = Aluno.objects.all()
@@ -10,3 +10,7 @@ class AlunoViewSet(viewsets.ModelViewSet):
 class ProfessorViewSet(viewsets.ModelViewSet):
     queryset = Professor.objects.all()
     serializer_class = ProfessorSerializer
+
+class TurmaViewSet(viewsets.ModelViewSet):
+    queryset = Turma.objects.all()
+    serializer_class = TurmaSerializer
