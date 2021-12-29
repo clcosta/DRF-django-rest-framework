@@ -92,7 +92,7 @@ class Turma(models.Model):
         return len(self.professores.all())
 
     @property
-    def list_materias(self):
+    def lista_materias(self):
         professores = self.professores.all()
         materias = [professor.materia for professor in professores if professor.materia]
         return materias

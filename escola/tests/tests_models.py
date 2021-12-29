@@ -137,7 +137,7 @@ class TestModelTurma(TestCase):
 
     def test_lista_materias(self):
         expected = ["Matemática","Geografia"]
-        result = self.turma.list_materias
+        result = self.turma.lista_materias
         self.assertEqual(expected, result)
 
     def test_turma_nome_unique(self):
