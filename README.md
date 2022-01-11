@@ -14,7 +14,7 @@ Sendo assim ela não tem o objetivo de ser um projeto ou sistema complexo, apena
 - Primeiramente você pode clonar este repositório.
 
 ```
-$ git clone https://github.com/clcosta/DRF-django-rest-framewok.git
+$ git clone https://github.com/clcosta/DRF-django-rest-framework.git
 ```
 
 - Agora a instalação das bibliotecas
