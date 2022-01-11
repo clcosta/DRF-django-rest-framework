@@ -1,0 +1,22 @@
+site_name: Django Rest Framework
+
+nav:
+   - Django Rest Framework: README.md
+
+theme:
+    name: material
+    palette:
+      - scheme: default
+        primary: deep purple
+        toggle:
+            icon: material/weather-night
+            name: Modo noturno
+      - scheme: slate
+        primary: deep purple
+        toggle:
+            icon: material/weather-sunny
+            name: Modo Claro
+
+markdown_extensions:
+    - pymdownx.highlight
+    - pymdownx.superfences

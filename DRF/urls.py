@@ -4,5 +4,5 @@ from django.urls.conf import include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', include(("escola.urls", "api"), namespace="api")),
+    path('', include(("escola.urls", "api"), namespace="api")),
 ]

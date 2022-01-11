@@ -1,0 +1,38 @@
+
+$very-light-gray       : #E6E6E6;
+$light-gray            : #757575;
+$gray                  : #373b41;
+
+$dark-gray             : lighten(#292A2B, 5%);
+$very-dark-gray        : #292A2B;
+
+$white                 : #f3f3f3;
+$light-midnight        : #676B79;
+$dark-midnight         : darken(#676B79, 15%);
+
+$blue                  : #45A9F9;
+$blue-light            : #6FC1FF;
+$purple                : #B084EB;
+$cyan                  : #19f9d8;
+$red                   : #FF2C6D;
+
+
+.corPrimaria{
+    color: $very-light-gray;
+}
+
+.corSecundaria{
+    color: $light-gray;
+}
+
+.corDestaque{
+    color: $cyan;
+}
+
+.subTitle{
+    color: $purple;
+}
+
+code {
+    color: $blue-light;
+}

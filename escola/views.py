@@ -1,9 +1,13 @@
+from django.views.generic.base import TemplateView
 from rest_framework import viewsets
 from rest_framework.permissions import IsAuthenticated
 
 from .models import Aluno, Professor, Turma
 from .serializer import AlunoSerializer, ProfessorSerializer, TurmaSerializer
 
+
+class IndexView(TemplateView):
+    template_name = "index.html"
 
 class AlunoViewSet(viewsets.ModelViewSet):
 
