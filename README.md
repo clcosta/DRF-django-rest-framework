@@ -84,7 +84,8 @@ Caso seu token tenha expirado é so fazer um POST no end-point **`/token/refresh
 ### Modelos da API
 
 1. #### Modelo _Alunos_
-  `class escola.models.Aluno`
+
+    `class escola.models.Aluno`
 
     **Fields**    
 
@@ -101,7 +102,8 @@ Caso seu token tenha expirado é so fazer um POST no end-point **`/token/refresh
         Required, default = ANO_1, choices = Aluno.ano_escolar_choices.
 
 2. #### Modelo _Professor_
-  `class escola.models.Professor`
+
+    `class escola.models.Professor`
 
     **Fields**    
 
@@ -118,7 +120,8 @@ Caso seu token tenha expirado é so fazer um POST no end-point **`/token/refresh
         Required, max_length=50, choices = Aluno.materias_choices.
 
 3. #### Modelo _Turma_
-  `class escola.models.Turma`
+
+    `class escola.models.Turma`
 
     **Fields**    
 
@@ -139,19 +142,19 @@ Caso seu token tenha expirado é so fazer um POST no end-point **`/token/refresh
     - _qtd_alunos_ -> **int**
 
         *return* Quantidade de alunos dentro da turma
-    
+
     - _qtd_professores_ -> **int**
 
         *return* Quantidade de professores dentro da turma
-    
+
     - _lista_materias_ -> **list**
 
         *return* Lista de materias correspondente aos professores já cadastrados na turma
-    
+
     - _lista_alunos_ -> **list**
 
         *return* Lista os alunos pelo nome
-    
+
     - _lista_professores_ -> **list**
 
         *return* Lista os professores pelo nome
