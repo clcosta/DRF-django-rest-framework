@@ -5,7 +5,6 @@ Esse projeto tem o intuito de criar uma API REST simples, com JWT como método d
 Sendo assim ela não tem o objetivo de ser um projeto ou sistema complexo, apenas uma experiência com o framework, toda a construição do banco de dados/modelos está com uma fácil visualização no painel Admin do django.
 
 ## Redes Sociais
-* [Site](https://portfolio-claudio.herokuapp.com)
 * [Instagram](https://www.instagram.com/claudiogfez/)
 * [Linkedin](https://www.linkedin.com/in/clcostaf/)
 
